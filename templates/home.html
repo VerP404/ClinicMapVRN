@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block title %}
+    Карта медицинских организаций
+{% endblock %}
+{% block content %}
+    <div class="parent">
+        <div class="div1">
+            <h2 class="title-text">Карта поликлиник города Воронеж</h2>
+        </div>
+        <div class="div2">
+            <div id="map" class="map"></div>
+        </div>
+        <div class="div3">
+            <div id="menu" class="menu">
+                <div class="form-group col-lg-6">
+                    <label>Медицинская организация</label>
+                    <select class="form-control input-lg" id="myMap">
+                        <option value="" disabled selected>Выберите медицинскую организацию</option>
+                    </select>
+                </div>
+                <div id="clinicInfo" class="clinic-info">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
