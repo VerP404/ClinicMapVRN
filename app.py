@@ -15,7 +15,7 @@ def home():
 # Эндпоинт для получения данных о всех медицинских организациях
 @app.route('/clinics')
 def get_clinics():
-    conn = sqlite3.connect('database.db')
+    conn = sqlite3.connect('data.db')
     cur = conn.cursor()
     cur.execute('SELECT * FROM clinics')
     clinics = cur.fetchall()
@@ -26,7 +26,7 @@ def get_clinics():
 # Эндпоинт для получения данных о клиниках и районах
 @app.route('/data')
 def get_data():
-    conn = sqlite3.connect('database.db')
+    conn = sqlite3.connect('data.db')
     cur = conn.cursor()
     cur.execute(
         'SELECT data.*, clinics.color, clinics.fillColor, clinics.id FROM data left join clinics on data.clinic = clinics.short_name')
