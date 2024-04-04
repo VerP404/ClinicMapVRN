@@ -56,3 +56,7 @@ def get_data():
         else:
             print(f"No valid data in row {row[0]}")  # Обрабатываем отсутствие данных
     return jsonify(formatted_data)
+
+
+if __name__ == '__main__':
+    app.run(debug=False, host='0.0.0.0', port=5000)
